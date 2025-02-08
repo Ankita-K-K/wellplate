@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Container */
+.app-container {
+  background: #ffffff;
+  width: 90%;
+  max-width: 800px;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+}
+
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background: url('https://sherohomefood.in/wp-content/uploads/2021/05/SHF_home-slide-1.jpg') no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 3rem 5%;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5); /* Dark overlay for readability */
+}
+
+.content {
+  z-index: 1;
+  max-width: 50%;
+}
+
+.hero-title {
+  font-size: 3.8rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #f97316;
+}
+
+.hero-text {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  color: rgb(240, 240, 240);
+}
+
+.custom-button {
+  background-color: #f97316;
+  padding: 0.9rem 1.8rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.custom-button:hover {
+  background-color: #d8550d;
+  transform: translateY(-3px);
+  box-shadow: 0px 5px 15px rgba(0, 150, 199, 0.3);
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 62%;
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.4); /* Semi-transparent navbar */
+}
+
+.navbar ul {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar ul li {
+  list-style: none;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #f97316;
+}
+
+.logo {
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-text {
+    font-size: 1.1rem;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .content {
+    max-width: 90%;
+  }
+}
